@@ -1,0 +1,103 @@
+npm notice run bazar-solidario-frontend@0.1.0 test
+npm notice run node --experimental-strip-types --test tests/*.test.ts
+TAP version 13
+# Subtest: UsuarioService — cadastro integrado ao formulário
+    # Subtest: valida campos antes de fazer qualquer requisição
+    ok 1 - valida campos antes de fazer qualquer requisição
+      ---
+      duration_ms: 1.7962
+      type: 'test'
+      ...
+    # Subtest: rejeita confirmação diferente sem enviar dados
+    ok 2 - rejeita confirmação diferente sem enviar dados
+      ---
+      duration_ms: 0.4484
+      type: 'test'
+      ...
+    # Subtest: aceita limites de senha e nome e retorna apenas dados públicos
+    ok 3 - aceita limites de senha e nome e retorna apenas dados públicos
+      ---
+      duration_ms: 52.7338
+      type: 'test'
+      ...
+    # Subtest: rejeita identificador inválido e perfil inesperado
+    ok 4 - rejeita identificador inválido e perfil inesperado
+      ---
+      duration_ms: 1.101
+      type: 'test'
+      ...
+    # Subtest: trata HTTP 422
+    ok 5 - trata HTTP 422
+      ---
+      duration_ms: 0.3477
+      type: 'test'
+      ...
+    # Subtest: trata HTTP 503
+    ok 6 - trata HTTP 503
+      ---
+      duration_ms: 0.2599
+      type: 'test'
+      ...
+    # Subtest: trata HTTP 504
+    ok 7 - trata HTTP 504
+      ---
+      duration_ms: 0.236
+      type: 'test'
+      ...
+    1..7
+ok 1 - UsuarioService — cadastro integrado ao formulário
+  ---
+  duration_ms: 58.1824
+  type: 'suite'
+  ...
+# Subtest: cadastro respeita o contrato existente e descarta a senha da resposta
+ok 2 - cadastro respeita o contrato existente e descarta a senha da resposta
+  ---
+  duration_ms: 55.002
+  type: 'test'
+  ...
+# Subtest: falha de rede produz mensagem recuperável
+ok 3 - falha de rede produz mensagem recuperável
+  ---
+  duration_ms: 0.6293
+  type: 'test'
+  ...
+# Subtest: erro HTTP 400 não expõe detalhes internos do backend
+ok 4 - erro HTTP 400 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.3515
+  type: 'test'
+  ...
+# Subtest: erro HTTP 409 não expõe detalhes internos do backend
+ok 5 - erro HTTP 409 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.2691
+  type: 'test'
+  ...
+# Subtest: erro HTTP 500 não expõe detalhes internos do backend
+ok 6 - erro HTTP 500 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.2152
+  type: 'test'
+  ...
+# Subtest: erro HTTP 502 não expõe detalhes internos do backend
+ok 7 - erro HTTP 502 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.2434
+  type: 'test'
+  ...
+# Subtest: resposta inválida não apresenta falso sucesso
+ok 8 - resposta inválida não apresenta falso sucesso
+  ---
+  duration_ms: 0.9601
+  type: 'test'
+  ...
+1..8
+# tests 14
+# suites 1
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 224.4177

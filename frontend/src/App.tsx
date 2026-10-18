@@ -1,3 +1,5 @@
+import { Heart, ShoppingBag, Search, Leaf, HandHeart, Home, UserRound, Shirt, CalendarDays } from "./components/CoastalIcons";
+import { ClothingIcon, AccessoriesIcon, ShoesIcon, SavedIcon } from "./components/CategoryIcons";
 import { useEffect, useRef, useState, type ComponentType } from "react";
 import {
   Link,
@@ -11,20 +13,9 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
-  Heart,
-  ShoppingBag,
-  Search,
-  Leaf,
-  HandHeart,
   Plus,
   X,
-  Home,
-  UserRound,
   SlidersHorizontal,
-  Shirt,
-  Footprints,
-  Gem,
-  CalendarDays,
   MapPin,
   ChevronRight,
   Check,
@@ -35,6 +26,9 @@ import {
 } from "lucide-react";
 import { events, photo, products, type Product } from "./data/store";
 import "./styles/mobile.css";
+import { Brand } from "./components/Brand";
+import { brand } from "./config/brand";
+import "./styles/urban.css";
 import { Cadastro } from "./components/Cadastro";
 
 const money = (n: number) =>
@@ -340,7 +334,7 @@ export default function App() {
         </Link>
         <section className="hero-card">
           <div className="hero-text">
-            <p className="eyebrow">NOVAS HISTÓRIAS</p>
+            <p className="eyebrow">ESTILO NO SEU DIA A DIA</p>
             <h2>
               Bom pra você.
               <br />
@@ -358,8 +352,8 @@ export default function App() {
             </Link>
           </div>
           <img
-            src={photo("photo-1483985988355-763728e1935b", 900)}
-            alt="Modelo usando uma peça de roupa ilustrativa"
+            src={photo("photo-1598082943135-fe5037a7649f", 900)}
+            alt="Fotografia ilustrativa: pessoa de camiseta branca na praia, por Mathias Reding"
           />
           <span className="hero-stamp">
             <Leaf size={16} /> MODA CIRCULAR
@@ -384,10 +378,10 @@ export default function App() {
           />
           <div className="categories">
             {[
-              ["Roupas", Shirt],
-              ["Acessórios", Gem],
-              ["Calçados", Footprints],
-              ["Favoritos", Heart],
+              ["Roupas", ClothingIcon],
+              ["Acessórios", AccessoriesIcon],
+              ["Calçados", ShoesIcon],
+              ["Favoritos", SavedIcon],
             ].map(([name, Icon]) => {
               const C = Icon as typeof Shirt;
               const n = name as string;
@@ -401,7 +395,7 @@ export default function App() {
                   }
                 >
                   <span>
-                    <C size={25} strokeWidth={1.5} />
+                    <C size={36} strokeWidth={1.7} />
                   </span>
                   {n}
                 </Link>
@@ -550,7 +544,7 @@ export default function App() {
     return (
       <>
         <Heading
-          eyebrow="NOVAS HISTÓRIAS A CAMINHO"
+          eyebrow="ESTILO NO SEU DIA A DIA A CAMINHO"
           title="Sua sacola."
           subtitle="Peças que você escolheu para um novo ciclo."
         />
@@ -707,7 +701,7 @@ export default function App() {
           <Link className="event-card" to={`/eventos/${e.id}`} key={e.id}>
             <img
               src={photo(e.photo, 800)}
-              alt="Roupas em uma loja organizada"
+              alt="Fotografia ilustrativa de roupas em uma arara de feira ao ar livre"
               loading="lazy"
             />
             <div>
@@ -1007,7 +1001,7 @@ export default function App() {
           <Link to="/privacidade">Privacidade</Link>
           <Link to="/termos">Termos de uso</Link>
         </div>
-        <p className="demo-note">Bazar Solidário · front-end demonstrativo</p>
+        <p className="demo-note">ISAC Brechó · projeto Bazar Solidário</p>
       </>
     );
   }
@@ -1133,13 +1127,8 @@ export default function App() {
       </a>
       <header className="app-header">
         {location.pathname === "/" ? (
-          <Link className="brand" to="/" aria-label="Bazar Solidário início">
-            <span className="brand-mark">
-              b<span>✳</span>
-            </span>
-            <span>
-              bazar<strong>solidário</strong>
-            </span>
+          <Link className="brand" to="/" aria-label={`${brand.name} início`}>
+            <Brand />
           </Link>
         ) : (
           <>

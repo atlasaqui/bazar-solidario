@@ -1,11 +1,4 @@
-:root {
-  --mobile-width: 480px;
-  --color-stage: #e9eeeb;
-  --color-tint: #e7efeb;
-  --color-aqua-tint: #dcefed;
-  --color-lavender-tint: #ede6f5;
-  --color-soft-gold: #ede5d5;
-}
+
 body {
   background: var(--color-stage);
   font-size: 14px;
@@ -79,7 +72,7 @@ button {
   background: var(--color-background);
   margin: auto;
   position: relative;
-  box-shadow: 0 0 70px rgb(22 63 67 / 0.09);
+  box-shadow: 0 0 70px rgb(64 41 30 / 0.09);
 }
 .app-header {
   height: 80px;
@@ -88,7 +81,7 @@ button {
   align-items: center;
   gap: 15px;
   background: var(--color-background);
-  border-bottom: 1px solid rgb(22 63 67 / 0.08);
+  border-bottom: 1px solid rgb(64 41 30 / 0.08);
 }
 .brand {
   display: flex;
@@ -280,8 +273,8 @@ main > section {
   background: linear-gradient(
     90deg,
     var(--color-primary) 42%,
-    rgb(22 63 67 / 0.38) 68%,
-    rgb(22 63 67 / 0.05)
+    rgb(64 41 30 / 0.38) 68%,
+    rgb(64 41 30 / 0.05)
   );
   z-index: -1;
 }
@@ -447,7 +440,7 @@ main > section {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  box-shadow: 0 2px 6px rgb(22 63 67 / 0.08);
+  box-shadow: 0 2px 6px rgb(64 41 30 / 0.08);
 }
 .favorite.selected {
   color: var(--color-violet);
@@ -619,7 +612,7 @@ main > section {
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
   z-index: 20;
-  box-shadow: 0 -4px 20px rgb(22 63 67 / 0.03);
+  box-shadow: 0 -4px 20px rgb(64 41 30 / 0.03);
 }
 .bottom-nav a {
   display: flex;

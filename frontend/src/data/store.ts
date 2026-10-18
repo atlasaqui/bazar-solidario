@@ -19,7 +19,7 @@ export const products = [
     price: 89,
     shop: "Circular Brechó",
     color: "Caramelo",
-    image: "photo-1548036328-c9fa89d128fa",
+    image: "/products/bolsa-caramelo-sem-marca.png",
     description:
       "Uma bolsa de linhas clássicas para levar o essencial com personalidade.",
   },
@@ -43,7 +43,7 @@ export const products = [
     price: 75,
     shop: "Novo Ciclo",
     color: "Caramelo",
-    image: "photo-1549298916-b41d501d3772",
+    image: "/products/tenis-casual-sem-marca.png",
     description:
       "Estilo casual para os seus próximos caminhos. Confira a numeração e os detalhes antes de escolher.",
   },
@@ -74,13 +74,15 @@ export const products = [
 ];
 export type Product = (typeof products)[number];
 export const photo = (id: string, width = 700) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=85`;
+  id.startsWith("/")
+    ? id
+    : `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=85`;
 export const events = [
   {
     id: "feira",
     name: "Achados & afetos",
     kind: "Feira de brechó",
-    photo: "photo-1441986300917-64674bd600d8",
+    photo: "photo-1685883785843-049df7767ce1",
     description:
       "Uma feira que reúne brechós independentes na ONG. Descubra peças, conheça quem está por trás de cada achado e se aproxime da comunidade.",
   },

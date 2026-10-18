@@ -1,9 +1,9 @@
 import { useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Eye, EyeOff } from "lucide-react";
-import { criarClienteUsuarios } from "../services/usuarios";
+import { UsuarioService } from "../services/usuarios";
 
-const cadastrar = criarClienteUsuarios(
+const usuarios = new UsuarioService(
   import.meta.env.VITE_API_BASE_URL || "/api",
 );
 
@@ -21,23 +21,15 @@ export function Cadastro() {
     const dados = new FormData(form);
     const nome = String(dados.get("nome") || "").trim();
     const senha = String(dados.get("senha") || "");
-    if (!nome) {
-      setErro("Informe seu nome.");
-      return;
-    }
-    if (senha !== dados.get("confirmacao")) {
-      setErro("As senhas precisam ser iguais.");
-      return;
-    }
     ocupado.current = true;
     setEnviando(true);
     setErro("");
     try {
-      const usuario = await cadastrar({
+      const usuario = await usuarios.cadastrar({
         nome,
         email: String(dados.get("email") || ""),
         senha,
-      });
+      }, String(dados.get("confirmacao") || ""));
       form.reset();
       setNomeCriado(usuario.nome);
     } catch (error) {

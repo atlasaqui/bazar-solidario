@@ -1,0 +1,107 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>PI3 — Evidências dos testes</title>
+<style>body{font:17px/1.6 system-ui;margin:48px auto;max-width:1050px;padding:0 32px;color:#183e39;background:#fafaf7}h1{font-size:38px;line-height:1.2}.cards{display:flex;gap:24px;margin:30px 0}.cards div{background:#e7f1ec;padding:24px;flex:1;border:1px solid #b9d2c6}strong{display:block;font-size:40px}pre{background:#fff;border:1px solid #ccd8d1;padding:24px;font:13px/1.5 monospace;white-space:pre-wrap}small{color:#4e615b}</style>
+<p>PROJETO INTEGRADOR 3 / BAZAR SOLIDÁRIO</p><h1>Testes unitários do website</h1><p>Execução real do Node.js Test Runner. Marco 1: cadastro integrado ao formulário React.</p>
+<div class="cards"><div><strong>14</strong>testes executados</div><div><strong>14</strong>aprovados</div><div><strong>0</strong>falhas</div><div><strong>1</strong>suítes de classes</div></div>
+<p>UsuarioService e regressões do contrato HTTP</p><p><small>2026-10-18T12:18:58.828Z · Node v22.23.2 · código de saída 0</small></p>
+<p>API de cadastro simulada nos testes unitários. Este relatório não comprova persistência no PostgreSQL nem autenticação.</p><h2>Saída completa da execução</h2><pre>TAP version 13
+# Subtest: UsuarioService — cadastro integrado ao formulário
+    # Subtest: valida campos antes de fazer qualquer requisição
+    ok 1 - valida campos antes de fazer qualquer requisição
+      ---
+      duration_ms: 1.6498
+      type: &#39;test&#39;
+      ...
+    # Subtest: rejeita confirmação diferente sem enviar dados
+    ok 2 - rejeita confirmação diferente sem enviar dados
+      ---
+      duration_ms: 0.4565
+      type: &#39;test&#39;
+      ...
+    # Subtest: aceita limites de senha e nome e retorna apenas dados públicos
+    ok 3 - aceita limites de senha e nome e retorna apenas dados públicos
+      ---
+      duration_ms: 25.2848
+      type: &#39;test&#39;
+      ...
+    # Subtest: rejeita identificador inválido e perfil inesperado
+    ok 4 - rejeita identificador inválido e perfil inesperado
+      ---
+      duration_ms: 1.1357
+      type: &#39;test&#39;
+      ...
+    # Subtest: trata HTTP 422
+    ok 5 - trata HTTP 422
+      ---
+      duration_ms: 0.3526
+      type: &#39;test&#39;
+      ...
+    # Subtest: trata HTTP 503
+    ok 6 - trata HTTP 503
+      ---
+      duration_ms: 0.295
+      type: &#39;test&#39;
+      ...
+    # Subtest: trata HTTP 504
+    ok 7 - trata HTTP 504
+      ---
+      duration_ms: 0.2841
+      type: &#39;test&#39;
+      ...
+    1..7
+ok 1 - UsuarioService — cadastro integrado ao formulário
+  ---
+  duration_ms: 30.9626
+  type: &#39;suite&#39;
+  ...
+# Subtest: cadastro respeita o contrato existente e descarta a senha da resposta
+ok 2 - cadastro respeita o contrato existente e descarta a senha da resposta
+  ---
+  duration_ms: 28.4371
+  type: &#39;test&#39;
+  ...
+# Subtest: falha de rede produz mensagem recuperável
+ok 3 - falha de rede produz mensagem recuperável
+  ---
+  duration_ms: 0.6496
+  type: &#39;test&#39;
+  ...
+# Subtest: erro HTTP 400 não expõe detalhes internos do backend
+ok 4 - erro HTTP 400 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.3682
+  type: &#39;test&#39;
+  ...
+# Subtest: erro HTTP 409 não expõe detalhes internos do backend
+ok 5 - erro HTTP 409 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.2661
+  type: &#39;test&#39;
+  ...
+# Subtest: erro HTTP 500 não expõe detalhes internos do backend
+ok 6 - erro HTTP 500 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.2244
+  type: &#39;test&#39;
+  ...
+# Subtest: erro HTTP 502 não expõe detalhes internos do backend
+ok 7 - erro HTTP 502 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.248
+  type: &#39;test&#39;
+  ...
+# Subtest: resposta inválida não apresenta falso sucesso
+ok 8 - resposta inválida não apresenta falso sucesso
+  ---
+  duration_ms: 1.4942
+  type: &#39;test&#39;
+  ...
+1..8
+# tests 14
+# suites 1
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 237.0542
+</pre></html>

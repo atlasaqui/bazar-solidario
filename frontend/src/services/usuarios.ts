@@ -12,14 +12,23 @@ export interface UsuarioCriado {
 }
 
 /** Contrato disponível no UsuarioController. Não devolve a senha ao restante da UI. */
-export function criarClienteUsuarios(
-  baseUrl: string,
-  fetcher: typeof fetch = fetch,
-) {
-  return async (dados: CadastroUsuario): Promise<UsuarioCriado> => {
+export class UsuarioService {
+  private readonly baseUrl: string;
+  private readonly fetcher: typeof fetch;
+
+  constructor(baseUrl: string, fetcher: typeof fetch = fetch) {
+    this.baseUrl = baseUrl;
+    this.fetcher = fetcher;
+  }
+
+  async cadastrar(dados: CadastroUsuario, confirmacao: string = dados.senha): Promise<UsuarioCriado> {
+    if (!dados.nome.trim() || dados.nome.trim().length > 255) throw new Error("Informe seu nome (até 255 caracteres).");
+    if (dados.email.trim().length > 255 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(dados.email.trim())) throw new Error("Informe um e-mail válido.");
+    if (dados.senha.length < 8 || dados.senha.length > 128 || !dados.senha.trim()) throw new Error("A senha deve ter entre 8 e 128 caracteres.");
+    if (dados.senha !== confirmacao) throw new Error("As senhas precisam ser iguais.");
     let resposta: Response;
     try {
-      resposta = await fetcher(`${baseUrl.replace(/\/$/, "")}/usuarios`, {
+      resposta = await this.fetcher(`${this.baseUrl.replace(/\/$/, "")}/usuarios`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -60,7 +69,7 @@ export function criarClienteUsuarios(
       throw new Error("O servidor retornou uma resposta inesperada.");
     }
     if (
-      typeof usuario?.id !== "number" ||
+      typeof usuario?.id !== "number" || !Number.isSafeInteger(usuario.id) || usuario.id <= 0 ||
       typeof usuario.nome !== "string" ||
       typeof usuario.email !== "string" ||
       usuario.role !== "CLIENTE"
@@ -73,5 +82,11 @@ export function criarClienteUsuarios(
       email: usuario.email,
       role: usuario.role,
     };
-  };
+  }
+}
+
+/** Compatibilidade com os consumidores anteriores. */
+export function criarClienteUsuarios(baseUrl: string, fetcher: typeof fetch = fetch) {
+  const service = new UsuarioService(baseUrl, fetcher);
+  return (dados: CadastroUsuario) => service.cadastrar(dados);
 }

@@ -1,0 +1,16 @@
+npm notice run bazar-solidario-frontend@0.1.0 build
+npm notice run tsc -b && vite build
+vite v5.4.21 building for production...
+transforming...
+✓ 1591 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                     0.75 kB │ gzip:  0.45 kB
+dist/assets/instrument-sans-latin-ext-wght-normal-B5bTHO_g.woff2   11.14 kB
+dist/assets/fraunces-vietnamese-wght-normal-CnvboYUG.woff2         11.57 kB
+dist/assets/instrument-sans-latin-wght-normal-BbzFLZTg.woff2       30.09 kB
+dist/assets/fraunces-latin-ext-wght-normal-Ca2vKHc0.woff2          33.58 kB
+dist/assets/fraunces-latin-wght-normal-ukD16Tqj.woff2              36.62 kB
+dist/assets/index-BCVhLm-d.css                                     28.56 kB │ gzip:  6.57 kB
+dist/assets/index-DPkbst2q.js                                     208.58 kB │ gzip: 66.71 kB
+✓ built in 2.56s

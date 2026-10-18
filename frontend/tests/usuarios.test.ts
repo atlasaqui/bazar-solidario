@@ -10,7 +10,7 @@ test("cadastro respeita o contrato existente e descarta a senha da resposta", as
       nome: "Ana",
       email: "ana@example.com",
       senha: "exemplo123",
-    });
+    }, { status: 201 });
     return Response.json({
       id: 1,
       nome: "Ana",
