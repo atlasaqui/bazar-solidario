@@ -15,9 +15,9 @@ Revisão: 3.0 | 18 de outubro de 2026
 
 GitHub: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
 
-Branch da versão: entrega/02-testes-unitarios-parte-1
+Branch local preparada: entrega/02-testes-unitarios-parte-1
 
-Código da versão: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
+Endereço previsto: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
 
 Sobre esta entrega
 
@@ -99,9 +99,9 @@ Registro da versão
 
 Repositório: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
 
-Branch: entrega/02-testes-unitarios-parte-1
+Branch local: entrega/02-testes-unitarios-parte-1
 
-Código no GitHub: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
+Endereço previsto: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
 
 Classe implementada: frontend/src/services/usuarios.ts
 
@@ -119,6 +119,6 @@ Continuidade do trabalho
 
 A segunda etapa mantém os testes de cadastro e acrescenta as classes de catálogo e sacola, com 20 novos testes. Essa ampliação está registrada em uma branch própria, preservando a consulta à implementação inicial.
 
-Versão seguinte: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
+Parte 2 preparada: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
 
 O cadastro foi testado com respostas HTTP simuladas. A verificação apresentada não inclui autenticação ou persistência no banco.
