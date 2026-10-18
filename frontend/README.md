@@ -1,7 +1,7 @@
-# ISAC Brechó — Parte 1
+# ISAC Brechó — Parte 2
 
-Marco técnico separado em 18/10/2026. Contém UsuarioService e 14 testes de cadastro. Catálogo e sacola ainda usam a lógica original da interface; suas classes de serviço e testes são acrescentados na Parte 2.
+Continuação técnica da Parte 1. Inclui UsuarioService, CatalogoService, SacolaService e 34 testes. Acrescenta duas classes e 20 testes em relação aos 14 testes do cadastro da etapa inicial.
 
-Na pasta frontend: npm ci, npm test, npm run test:evidencias e npm run build. Requer Node.js 22.18 ou superior.
+Executar na pasta frontend: npm ci, npm test, npm run test:evidencias, npm run build e npm run dev. Requer Node.js 22.18 ou superior.
 
-Esta organização não representa um commit ou uma execução de semanas anteriores.
+Esta versão foi organizada e executada em 18/10/2026; não representa publicação em semanas anteriores.

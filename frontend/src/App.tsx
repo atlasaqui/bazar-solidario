@@ -31,17 +31,17 @@ import { brand } from "./config/brand";
 import "./styles/urban.css";
 import { Cadastro } from "./components/Cadastro";
 
+import { CatalogoService } from "./services/CatalogoService";
+import { SacolaService } from "./services/SacolaService";
+
+const catalogo = new CatalogoService(products);
+const sacola = new SacolaService(products);
+
 const money = (n: number) =>
   n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 function savedIds(key: string): number[] {
   try {
-    const v: unknown = JSON.parse(localStorage.getItem(key) || "[]");
-    return Array.isArray(v)
-      ? v.filter(
-          (id): id is number =>
-            typeof id === "number" && products.some((p) => p.id === id),
-        )
-      : [];
+    return sacola.restaurar(localStorage.getItem(key));
   } catch {
     return [];
   }
@@ -77,23 +77,7 @@ function Catalog({
   useEffect(() => {
     setCategory(new URLSearchParams(search).get("categoria") || "Todos");
   }, [search, favoritesOnly]);
-  const items = products
-    .filter(
-      (p) =>
-        (!favoritesOnly || favorites.includes(p.id)) &&
-        (category === "Todos" || category === p.category) &&
-        (size === "Todos" || size === p.size) &&
-        `${p.name} ${p.shop}`
-          .toLocaleLowerCase("pt-BR")
-          .includes(query.toLocaleLowerCase("pt-BR")),
-    )
-    .sort((a, b) =>
-      sort === "menor"
-        ? a.price - b.price
-        : sort === "maior"
-          ? b.price - a.price
-          : a.id - b.id,
-    );
+  const items = catalogo.buscar({ query, category, size, sort, favoritesOnly, favorites });
   return (
     <>
       <Heading
@@ -223,7 +207,7 @@ export default function App() {
   function add(id: number) {
     if (cart.includes(id)) notify("Esta peça já está na sua sacola.");
     else {
-      setCart([...cart, id]);
+      setCart((atual) => sacola.adicionar(atual, id));
       notify("Achado adicionado à sacola.");
     }
   }
@@ -540,7 +524,7 @@ export default function App() {
     );
   }
   function CartPage() {
-    const items = products.filter((x) => cart.includes(x.id));
+    const items = sacola.itens(cart);
     return (
       <>
         <Heading
@@ -566,7 +550,7 @@ export default function App() {
                   </div>
                   <button
                     aria-label={`Remover ${p.name}`}
-                    onClick={() => setCart(cart.filter((x) => x !== p.id))}
+                    onClick={() => setCart((atual) => sacola.remover(atual, p.id))}
                   >
                     <Trash2 size={18} />
                   </button>
@@ -577,7 +561,7 @@ export default function App() {
               <h2>Resumo da sacola</h2>
               <p>
                 <span>{items.length} peças</span>
-                <strong>{money(items.reduce((n, p) => n + p.price, 0))}</strong>
+                <strong>{money(sacola.subtotal(cart))}</strong>
               </p>
               <p>
                 <span>Entrega ou retirada</span>
@@ -585,7 +569,7 @@ export default function App() {
               </p>
               <div className="total">
                 <span>Subtotal</span>
-                <strong>{money(items.reduce((n, p) => n + p.price, 0))}</strong>
+                <strong>{money(sacola.subtotal(cart))}</strong>
               </div>
               <Link className="btn full" to="/checkout">
                 Continuar <ArrowRight size={18} />
@@ -680,9 +664,7 @@ export default function App() {
               <span>Subtotal ilustrativo</span>
               <strong>
                 {money(
-                  products
-                    .filter((p) => cart.includes(p.id))
-                    .reduce((n, p) => n + p.price, 0),
+                  sacola.subtotal(cart),
                 )}
               </strong>
             </div>
@@ -1235,8 +1217,10 @@ export default function App() {
                 </p>
                 <h2 className="small-title">Fotografias externas</h2>
                 <p className="body-copy">
-                  As imagens ilustrativas são carregadas do Unsplash. Seu
-                  navegador se conecta a esse serviço para exibi-las.
+                  Parte das imagens ilustrativas é carregada do Unsplash. Seu
+                  navegador se conecta a esse serviço para exibi-las. As imagens
+                  da bolsa caramelo e do tênis casual foram geradas com IA para
+                  este catálogo demonstrativo e não representam peças à venda.
                 </p>
                 <button
                   className="btn full"

@@ -1,0 +1,237 @@
+npm notice run bazar-solidario-frontend@0.1.0 test
+npm notice run node --experimental-strip-types --test tests/*.test.ts
+TAP version 13
+# Subtest: CatalogoService — busca e filtros do site
+    # Subtest: lista todas as peças por padrão
+    ok 1 - lista todas as peças por padrão
+      ---
+      duration_ms: 2.2005
+      type: 'test'
+      ...
+    # Subtest: busca nome ignorando acentos, caixa e espaços externos
+    ok 2 - busca nome ignorando acentos, caixa e espaços externos
+      ---
+      duration_ms: 0.8367
+      type: 'test'
+      ...
+    # Subtest: busca pelo brechó
+    ok 3 - busca pelo brechó
+      ---
+      duration_ms: 0.238
+      type: 'test'
+      ...
+    # Subtest: combina categoria, tamanho, favoritos e texto
+    ok 4 - combina categoria, tamanho, favoritos e texto
+      ---
+      duration_ms: 0.1891
+      type: 'test'
+      ...
+    # Subtest: retorna vazio quando não há correspondência
+    ok 5 - retorna vazio quando não há correspondência
+      ---
+      duration_ms: 0.2618
+      type: 'test'
+      ...
+    # Subtest: favoritos vazios não exibem todo o catálogo
+    ok 6 - favoritos vazios não exibem todo o catálogo
+      ---
+      duration_ms: 0.1322
+      type: 'test'
+      ...
+    # Subtest: ordena preços crescentes e decrescentes
+    ok 7 - ordena preços crescentes e decrescentes
+      ---
+      duration_ms: 0.3941
+      type: 'test'
+      ...
+    # Subtest: mantém curadoria após ordenar e não permite modificar o catálogo pela resposta
+    ok 8 - mantém curadoria após ordenar e não permite modificar o catálogo pela resposta
+      ---
+      duration_ms: 0.3736
+      type: 'test'
+      ...
+    # Subtest: aceita catálogo vazio
+    ok 9 - aceita catálogo vazio
+      ---
+      duration_ms: 0.316
+      type: 'test'
+      ...
+    1..9
+ok 1 - CatalogoService — busca e filtros do site
+  ---
+  duration_ms: 6.368
+  type: 'suite'
+  ...
+# Subtest: SacolaService — peças únicas e subtotal
+    # Subtest: adiciona uma peça sem modificar o estado anterior
+    ok 1 - adiciona uma peça sem modificar o estado anterior
+      ---
+      duration_ms: 1.6947
+      type: 'test'
+      ...
+    # Subtest: não duplica uma peça única
+    ok 2 - não duplica uma peça única
+      ---
+      duration_ms: 0.2153
+      type: 'test'
+      ...
+    # Subtest: rejeita peça inexistente
+    ok 3 - rejeita peça inexistente
+      ---
+      duration_ms: 0.6159
+      type: 'test'
+      ...
+    # Subtest: remove somente a peça escolhida
+    ok 4 - remove somente a peça escolhida
+      ---
+      duration_ms: 0.237
+      type: 'test'
+      ...
+    # Subtest: remover ID ausente mantém os itens válidos
+    ok 5 - remover ID ausente mantém os itens válidos
+      ---
+      duration_ms: 0.1493
+      type: 'test'
+      ...
+    # Subtest: restaura IDs válidos e descarta duplicatas e valores inválidos
+    ok 6 - restaura IDs válidos e descarta duplicatas e valores inválidos
+      ---
+      duration_ms: 0.3369
+      type: 'test'
+      ...
+    # Subtest: recupera armazenamento vazio, corrompido ou não-array
+    ok 7 - recupera armazenamento vazio, corrompido ou não-array
+      ---
+      duration_ms: 0.3566
+      type: 'test'
+      ...
+    # Subtest: calcula subtotal apenas de peças válidas, sem duplicatas
+    ok 8 - calcula subtotal apenas de peças válidas, sem duplicatas
+      ---
+      duration_ms: 0.4385
+      type: 'test'
+      ...
+    # Subtest: calcula valores monetários em centavos
+    ok 9 - calcula valores monetários em centavos
+      ---
+      duration_ms: 0.4983
+      type: 'test'
+      ...
+    # Subtest: sacola vazia tem subtotal zero
+    ok 10 - sacola vazia tem subtotal zero
+      ---
+      duration_ms: 0.6261
+      type: 'test'
+      ...
+    # Subtest: itens retornados não permitem alterar preços internos
+    ok 11 - itens retornados não permitem alterar preços internos
+      ---
+      duration_ms: 1.1166
+      type: 'test'
+      ...
+    1..11
+ok 2 - SacolaService — peças únicas e subtotal
+  ---
+  duration_ms: 8.0424
+  type: 'suite'
+  ...
+# Subtest: UsuarioService — cadastro integrado ao formulário
+    # Subtest: valida campos antes de fazer qualquer requisição
+    ok 1 - valida campos antes de fazer qualquer requisição
+      ---
+      duration_ms: 2.5851
+      type: 'test'
+      ...
+    # Subtest: rejeita confirmação diferente sem enviar dados
+    ok 2 - rejeita confirmação diferente sem enviar dados
+      ---
+      duration_ms: 0.72
+      type: 'test'
+      ...
+    # Subtest: aceita limites de senha e nome e retorna apenas dados públicos
+    ok 3 - aceita limites de senha e nome e retorna apenas dados públicos
+      ---
+      duration_ms: 27.751
+      type: 'test'
+      ...
+    # Subtest: rejeita identificador inválido e perfil inesperado
+    ok 4 - rejeita identificador inválido e perfil inesperado
+      ---
+      duration_ms: 1.1858
+      type: 'test'
+      ...
+    # Subtest: trata HTTP 422
+    ok 5 - trata HTTP 422
+      ---
+      duration_ms: 0.3611
+      type: 'test'
+      ...
+    # Subtest: trata HTTP 503
+    ok 6 - trata HTTP 503
+      ---
+      duration_ms: 0.2738
+      type: 'test'
+      ...
+    # Subtest: trata HTTP 504
+    ok 7 - trata HTTP 504
+      ---
+      duration_ms: 0.2317
+      type: 'test'
+      ...
+    1..7
+ok 3 - UsuarioService — cadastro integrado ao formulário
+  ---
+  duration_ms: 35.021
+  type: 'suite'
+  ...
+# Subtest: cadastro respeita o contrato existente e descarta a senha da resposta
+ok 4 - cadastro respeita o contrato existente e descarta a senha da resposta
+  ---
+  duration_ms: 24.6353
+  type: 'test'
+  ...
+# Subtest: falha de rede produz mensagem recuperável
+ok 5 - falha de rede produz mensagem recuperável
+  ---
+  duration_ms: 0.692
+  type: 'test'
+  ...
+# Subtest: erro HTTP 400 não expõe detalhes internos do backend
+ok 6 - erro HTTP 400 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.3814
+  type: 'test'
+  ...
+# Subtest: erro HTTP 409 não expõe detalhes internos do backend
+ok 7 - erro HTTP 409 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.2886
+  type: 'test'
+  ...
+# Subtest: erro HTTP 500 não expõe detalhes internos do backend
+ok 8 - erro HTTP 500 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.2141
+  type: 'test'
+  ...
+# Subtest: erro HTTP 502 não expõe detalhes internos do backend
+ok 9 - erro HTTP 502 não expõe detalhes internos do backend
+  ---
+  duration_ms: 0.256
+  type: 'test'
+  ...
+# Subtest: resposta inválida não apresenta falso sucesso
+ok 10 - resposta inválida não apresenta falso sucesso
+  ---
+  duration_ms: 0.9947
+  type: 'test'
+  ...
+1..10
+# tests 34
+# suites 3
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 207.0015

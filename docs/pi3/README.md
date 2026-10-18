@@ -1,11 +1,13 @@
 # ISAC Brechó — Projeto Integrador 3
 
-Documento de casos de teste: dois casos de uso e dez casos de teste.
-
 Repositório: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
 
-- Documento: entrega/01-documento-casos-de-teste
-- Testes Parte 1: entrega/02-testes-unitarios-parte-1
-- Testes Parte 2: entrega/03-testes-unitarios-parte-2
+## Etapas
 
-Os relatórios registram a execução realizada em 18/10/2026.
+- entrega/01-documento-casos-de-teste: plano com dois casos de uso e dez casos de teste.
+- entrega/02-testes-unitarios-parte-1: UsuarioService e 14 testes de cadastro.
+- entrega/03-testes-unitarios-parte-2: cadastro, catálogo e sacola, com 34 testes.
+
+A segunda etapa de testes preserva os 14 testes do cadastro e acrescenta nove de catálogo e onze de sacola. As evidências da Parte 1 estão em evidencias/parte1, e as da Parte 2 em evidencias.
+
+As execuções registradas são de 18/10/2026. Os testes cobrem as classes de serviço do front-end; a API é simulada nos testes de cadastro.
