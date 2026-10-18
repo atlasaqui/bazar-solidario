@@ -14,9 +14,9 @@ Revisão: 3.0 | 18 de outubro de 2026
 
 GitHub: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
 
-Branch da versão: entrega/01-documento-casos-de-teste
+Branch local preparada: entrega/01-documento-casos-de-teste
 
-Código da versão: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/01-documento-casos-de-teste
+Endereço previsto: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/01-documento-casos-de-teste
 
 Sobre esta entrega
 
