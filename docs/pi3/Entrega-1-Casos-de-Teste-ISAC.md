@@ -12,11 +12,11 @@ Módulo: Cadastro e catálogo do front-end
 
 Revisão: 3.0 | 18 de outubro de 2026
 
-GitHub: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
+GitHub: https://github.com/atlasaqui/bazar-solidario
 
-Branch local preparada: entrega/01-documento-casos-de-teste
+Branch publicada: entrega/01-documento-casos-de-teste
 
-Endereço previsto: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/01-documento-casos-de-teste
+Código publicado: https://github.com/atlasaqui/bazar-solidario/tree/entrega/01-documento-casos-de-teste
 
 Sobre esta entrega
 
