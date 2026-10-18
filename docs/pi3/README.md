@@ -2,7 +2,7 @@
 
 Documento de casos de teste: dois casos de uso e dez casos de teste.
 
-Repositório: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
+Repositório: https://github.com/atlasaqui/bazar-solidario
 
 - Documento: entrega/01-documento-casos-de-teste
 - Testes Parte 1: entrega/02-testes-unitarios-parte-1
