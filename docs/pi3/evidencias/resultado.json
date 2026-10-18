@@ -1,9 +1,9 @@
 {
-  "executedAt": "2026-10-18T12:18:58.828Z",
+  "executedAt": "2026-10-18T12:19:50.415Z",
   "node": "v22.23.2",
   "exitCode": 0,
-  "tests": 14,
-  "passed": 14,
+  "tests": 34,
+  "passed": 34,
   "failed": 0,
-  "suites": 1
+  "suites": 3
 }
