@@ -15,9 +15,9 @@ Revisão: 3.0 | 18 de outubro de 2026
 
 GitHub: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
 
-Branch da versão: entrega/03-testes-unitarios-parte-2
+Branch local preparada: entrega/03-testes-unitarios-parte-2
 
-Código da versão: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
+Endereço previsto: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
 
 Sobre esta entrega
 
@@ -189,13 +189,13 @@ Referências da implementação
 
 Repositório: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
 
-Branch da Parte 1: entrega/02-testes-unitarios-parte-1
+Branch local da Parte 1: entrega/02-testes-unitarios-parte-1
 
-Versão inicial: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
+Endereço previsto da Parte 1: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
 
-Branch da Parte 2: entrega/03-testes-unitarios-parte-2
+Branch local da Parte 2: entrega/03-testes-unitarios-parte-2
 
-Versão ampliada: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
+Endereço previsto da Parte 2: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
 
 Evidências: docs/pi3/evidencias/testes.tap
 docs/pi3/evidencias/resultado.json
