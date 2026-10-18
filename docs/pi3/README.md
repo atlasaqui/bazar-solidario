@@ -1,6 +1,6 @@
 # ISAC Brechó — Projeto Integrador 3
 
-Repositório: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
+Repositório: https://github.com/atlasaqui/bazar-solidario
 
 ## Etapas
 

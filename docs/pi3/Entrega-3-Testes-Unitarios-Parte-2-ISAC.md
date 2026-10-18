@@ -13,11 +13,11 @@ Módulo: Três classes de serviço e suas classes de teste
 
 Revisão: 3.0 | 18 de outubro de 2026
 
-GitHub: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
+GitHub: https://github.com/atlasaqui/bazar-solidario
 
-Branch local preparada: entrega/03-testes-unitarios-parte-2
+Branch publicada: entrega/03-testes-unitarios-parte-2
 
-Endereço previsto: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
+Código publicado: https://github.com/atlasaqui/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
 
 Sobre esta entrega
 
@@ -187,15 +187,15 @@ Os prints do protótipo são registros de conferência manual. Eles complementam
 
 Referências da implementação
 
-Repositório: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
+Repositório: https://github.com/atlasaqui/bazar-solidario
 
 Branch local da Parte 1: entrega/02-testes-unitarios-parte-1
 
-Endereço previsto da Parte 1: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
+Código publicado da Parte 1: https://github.com/atlasaqui/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
 
 Branch local da Parte 2: entrega/03-testes-unitarios-parte-2
 
-Endereço previsto da Parte 2: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
+Código publicado da Parte 2: https://github.com/atlasaqui/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
 
 Evidências: docs/pi3/evidencias/testes.tap
 docs/pi3/evidencias/resultado.json

@@ -13,11 +13,11 @@ Módulo: UsuarioService e testes de cadastro
 
 Revisão: 3.0 | 18 de outubro de 2026
 
-GitHub: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
+GitHub: https://github.com/atlasaqui/bazar-solidario
 
-Branch local preparada: entrega/02-testes-unitarios-parte-1
+Branch publicada: entrega/02-testes-unitarios-parte-1
 
-Endereço previsto: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
+Código publicado: https://github.com/atlasaqui/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
 
 Sobre esta entrega
 
@@ -97,11 +97,11 @@ A imagem parte1-testes-completo.png mostra os 14 cenários executados nesta etap
 
 Registro da versão
 
-Repositório: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario
+Repositório: https://github.com/atlasaqui/bazar-solidario
 
 Branch local: entrega/02-testes-unitarios-parte-1
 
-Endereço previsto: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
+Código publicado: https://github.com/atlasaqui/bazar-solidario/tree/entrega/02-testes-unitarios-parte-1
 
 Classe implementada: frontend/src/services/usuarios.ts
 
@@ -119,6 +119,6 @@ Continuidade do trabalho
 
 A segunda etapa mantém os testes de cadastro e acrescenta as classes de catálogo e sacola, com 20 novos testes. Essa ampliação está registrada em uma branch própria, preservando a consulta à implementação inicial.
 
-Parte 2 preparada: https://github.com/Residencia-Tecnologica-2026-2/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
+Parte 2 preparada: https://github.com/atlasaqui/bazar-solidario/tree/entrega/03-testes-unitarios-parte-2
 
 O cadastro foi testado com respostas HTTP simuladas. A verificação apresentada não inclui autenticação ou persistência no banco.
